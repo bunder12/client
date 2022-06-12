@@ -137,21 +137,32 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-#main .selengkap:hover{
+/* #main .selengkap:hover{
   z-index: 20;
   background-color: #333;
   opacity: 50%;
   color: #fff;
-}
+} */
 
 #main .selengkap h2{
   color: #fff;
   opacity: 0%;
 }
 
-#main .selengkap h2:hover{
+#main .selengkap:hover h2{
+  position: absolute;
+  width: 76%;
+  top: 0;
+  bottom: 0;
+  /* left: 0;
+  right: 0; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   opacity: 100%;
+  background-color: #333;
 }
 
 #main .selengkap1{
@@ -556,13 +567,71 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+#clients .con h2{
+  opacity: 0;
+}
+
+#clients .con h2:hover{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0.5;
+}
+
+#clients .con1 h2{
+  opacity: 0;
+}
+
+#clients .con1 h2:hover{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0.5;
+}
+
+#clients .con2 h2{
+  opacity: 0;
+}
+
+#clients .con2 h2:hover{
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0.5;
+}
+
+@media (max-width: 725px) {
+  #clients .con{
+    margin-bottom: 20px;
+  }
+  #clients .con1{
+    margin-bottom: 20px;
+  }
+  #clients .con2{
+    margin-bottom: 20px;
+  }
+}
+
 section {
   padding: 60px 0;
   overflow: hidden;
+  position: relative;
 }
 
 .section-bg {
-  background-color: #f3f5fa;
+  background-color: none;
 }
 
 .section-title {
@@ -608,7 +677,7 @@ section {
 .services {
   background-color: #FEFEFE;
   text-align: center;
-  padding: 240px 0;
+  padding: 40px 0;
 }
 .services .next{
   margin-top: 20px;
