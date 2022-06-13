@@ -112,28 +112,28 @@
 
       <div class="slicked row" data-aos="zoom-in">
 
-        <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
+        <div class="pro col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
           <div class="con position-relative d-flex align-items-center justify-content-center">
             <img src="assets/img/promo1.png" class="img-fluid" alt="">
             <h2 class="position-absolute">Lebih Lengkap</h2>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
+        <div class="pro col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
           <div class="con1 position-relative d-flex align-items-center justify-content-center">
             <img src="assets/img/promo2.png" class="img-fluid" alt="">
             <h2 class="position-absolute">Lebih Lengkap</h2>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
+        <div class="pro col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
           <div class="con2 position-relative d-flex align-items-center justify-content-center">
             <img src="assets/img/promo3.png" class="img-fluid" alt="">
             <h2 class="position-absolute">Lebih Lengkap</h2>
           </div>
         </div>
         
-        <div class="col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
+        <div class="pro col-lg-4 col-md-4 col-12 d-flex align-items-center justify-content-center">
           <div class="con2 position-relative d-flex align-items-center justify-content-center">
             <img src="assets/img/promo4.png" class="img-fluid" alt="">
             <h2 class="position-absolute">Lebih Lengkap</h2>
@@ -659,6 +659,17 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script type="text/javascript" >
+
+    var x = window.matchMedia("(max-width: 700px)")
+    if (x.matches) { 
+      $(".slicked2").slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+
     $(".slicked").slick({
       dots: true,
       infinite: true,
@@ -667,13 +678,23 @@
       adaptiveHeight: true
     });
 
+  } else {
     $(".slicked2").slick({
       dots: true,
       infinite: true,
       speed: 300,
-      slidesToShow: 1,
+      slidesToShow: 3,
       adaptiveHeight: true
     });
+
+    $(".slicked").slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      adaptiveHeight: true
+    });
+  }
   </script>
 
 </body>
